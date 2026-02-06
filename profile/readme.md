@@ -1,34 +1,70 @@
 # TechDas
-
-**Industrial AI & Virtual Sensor Engineering Team**
+### 산업 AI · 가상센서 엔지니어링 팀
 
 테크다스는 제조·에너지 공정을 대상으로  
-**가상센서(Virtual Sensor), 이상탐지, 효율 분석** 시스템을 설계·개발합니다.
+**가상센서(Virtual Sensor) 기반 예측, 이상진단, 공정 효율 관리** 시스템을 설계·개발합니다.
+
+현장 계측 한계와 유지보수 비용 문제를 해결하기 위해  
+AI/머신러닝 기반 **가상센서 및 스마트 관제 기술**을 실제 공정에 적용하고 있습니다.
 
 ---
 
-## What we do
-- **Virtual Sensor Systems**
-  - CO / 효율 / 품질 예측 모델
-  - 실시간 상태 판정 및 알람
-- **Monitoring & Diagnostics**
-  - Sensor Validation (PCA, SPE, T²)
-  - 공정 이상 탐지 및 원인 변수 식별
-- **Industrial Data Pipeline**
-  - RTDB / DB 수집
-  - 전처리 → 모델 → 결과 저장/전송 → Dashboard
+## 주요 업무 영역
+
+### 가상센서 시스템
+- 배기가스(O₂, CO, NOx 등) 및 공정 변수 예측
+- CO / 효율 / 품질 예측 모델 운영
+- 하드웨어 분석기 대체 또는 이중화 목적의 가상센서 적용
+- 예측 불확실성 기반 신뢰구간 산출 및 상태 판정
+
+### 센서 진단 · 이상 탐지
+- Sensor Validation (PCA, SPE, T², Combined Index)
+- 센서 고장 탐지 / 고장 변수 식별 / 오지시 보정
+- 가상센서 예측 신뢰성 확보를 위한 사전 진단 로직
+
+### 산업 데이터 파이프라인
+- PLC / DCS → RTDB / 운영 DB 데이터 수집
+- 결측치·이상치 처리 및 파생변수 생성
+- 전처리 → 진단 → 예측 → 결과 저장/전송 → 대시보드 연계
+- 프로젝트별 설정 기반 표준 구조 운영
 
 ---
 
-## Key Projects
-- **HDC_Heater_2025** – HS-K1001A/B Heater Monitoring  
-- **HDO_Heater_2025** – Heater Virtual Sensor System  
-- **RIST_BUR_2026** – Furnace / Burner Analytics  
-- **CO_VirtualSensor_2026** – CO Prediction Platform  
-- **internal-docs** – System Design & Development Standards
+## 기술적 특징
+
+- **AI 기반 가상센서**
+  - PLS, ANN/DNN, A-ANN, XGBoost, LGBM 등 회귀 모델 적용
+  - EPA PEMS(PS-16) 수준의 성능 기준 고려
+- **불확실성 기반 예측**
+  - 모델·입력·출력 불확실성 산출
+  - 예측 신뢰도 및 위험도 판단에 활용
+- **표준화된 실행 플랫폼**
+  - 코드 구조, 데이터 스키마, 워크플로우 표준화
+  - 신규 프로젝트의 빠른 확장 및 유지보수 효율화
 
 ---
 
-## For Members
-- 내부 설계 문서 및 개발 규칙은 `internal-docs` 레포를 참고하세요.
-- 신규 프로젝트는 공통 구조 및 템플릿을 따릅니다.
+## 주요 프로젝트
+
+| 프로젝트 | 설명 |
+|--------|------|
+| **HDC_Heater_2025** | HS-K1001A/B 가열기 모니터링 및 가상센서 |
+| **HDO_Heater_2025** | 가열기 가상센서 기반 효율·상태 분석 |
+| **RIST_BUR_2026** | 가열로 / 버너 공정 분석 시스템 |
+| **CO_VirtualSensor_2026** | CO 예측 및 이상 모니터링 플랫폼 |
+| **internal-docs** | 시스템 설계, 코드·DB·운영 표준 문서 |
+
+---
+
+## 적용 대상 설비
+- 가스 / 석탄 보일러
+- 가열로, NCC 분해로
+- LNG 복합발전, 유동층 보일러
+- 실시간 운전 데이터가 수집되는 연소 설비 전반
+
+---
+
+## 팀원 안내
+- 설계 기준, 코드 구조, DB 네이밍, 운영 가이드는  
+  👉 [internal-docs](https://github.com/techdas/internal-docs) 레포를 참고하세요.
+- 신규 프로젝트는 공통 플랫폼 구조를 기준으로 확장합니다.
